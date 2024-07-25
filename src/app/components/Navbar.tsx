@@ -49,8 +49,8 @@ const Navbar = () => {
         />
       </nav>
       <div
-        className={`absolute right-0 top-0 z-40 h-screen sm:w-1/2 w-full  flex-col backdrop-blur-sm  bg-gray-100 transition-transform duration-300 lg:hidden ${
-          isMenuOpen ? "flex translate-x-0" : "translate-x-full"
+        className={`absolute right-0 top-0 z-40 h-screen w-full flex-col bg-gray-100 backdrop-blur-sm transition-transform duration-300 sm:w-1/2 lg:hidden ${
+          isMenuOpen ? "flex translate-x-0" : "hidden translate-x-full"
         }`}
       >
         <div className="flex w-full justify-end p-5">
@@ -71,7 +71,7 @@ const Navbar = () => {
             <Link
               href={link.href}
               key={link.key}
-              className="regular-16 !text-2xl flex-center cursor-pointer pb-1.5 text-black transition-all hover:font-bold font-semibold"
+              className="regular-16 flex-center cursor-pointer pb-1.5 !text-2xl font-semibold text-black transition-all hover:font-bold"
             >
               {link.label}
             </Link>
